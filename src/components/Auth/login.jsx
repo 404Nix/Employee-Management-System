@@ -6,7 +6,11 @@ const login = () => {
 
   const formHandler = (e) => {
     e.preventDefault();
-    console.log("Submitted");
+    console.log("email is:", email);
+    console.log("password is:", password);
+
+    setEmail("");
+    setPassword("");
   };
 
   return (
