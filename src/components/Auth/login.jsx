@@ -14,7 +14,7 @@ const login = () => {
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-gray-900">
+    <div className="flex h-screen w-full items-center justify-center bg-[#111111]">
       <div>
         <form
           onSubmit={(e) => {
