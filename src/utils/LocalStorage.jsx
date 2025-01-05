@@ -1,6 +1,7 @@
 const employees = [
   {
     id: 1,
+    firstName: "Aarav",
     email: "employee1@example.com",
     password: "123",
     tasks: [
@@ -12,6 +13,7 @@ const employees = [
         taskTitle: "Complete onboarding",
         taskDate: "2025-01-02",
         category: "HR",
+        description: "Complete the mandatory onboarding process for new employees.",
       },
       {
         active: false,
@@ -21,6 +23,7 @@ const employees = [
         taskTitle: "Submit report",
         taskDate: "2024-12-30",
         category: "Operations",
+        description: "Submit the end-of-quarter operations report to the manager.",
       },
       {
         active: true,
@@ -30,11 +33,14 @@ const employees = [
         taskTitle: "Attend training session",
         taskDate: "2025-01-04",
         category: "Training",
+        description: "Participate in the scheduled training session to enhance skills.",
       },
     ],
+    taskCount: { active: 2, new: 1, failed: 0, completed: 1 },
   },
   {
     id: 2,
+    firstName: "Ishaan",
     email: "employee2@example.com",
     password: "123",
     tasks: [
@@ -46,6 +52,7 @@ const employees = [
         taskTitle: "Update project documentation",
         taskDate: "2025-01-01",
         category: "Documentation",
+        description: "Review and update project documentation to include recent changes.",
       },
       {
         active: false,
@@ -55,6 +62,7 @@ const employees = [
         taskTitle: "Fix UI issue",
         taskDate: "2024-12-31",
         category: "Development",
+        description: "Resolve the reported user interface issue on the login page.",
       },
       {
         active: true,
@@ -64,6 +72,7 @@ const employees = [
         taskTitle: "Prepare progress report",
         taskDate: "2025-01-03",
         category: "Operations",
+        description: "Draft the progress report for the ongoing project.",
       },
       {
         active: false,
@@ -73,11 +82,14 @@ const employees = [
         taskTitle: "Bug resolution review",
         taskDate: "2024-12-30",
         category: "Development",
+        description: "Review the unresolved bugs and identify the root causes.",
       },
     ],
+    taskCount: { active: 2, new: 2, failed: 1, completed: 1 },
   },
   {
     id: 3,
+    firstName: "Diya",
     email: "employee3@example.com",
     password: "123",
     tasks: [
@@ -89,6 +101,7 @@ const employees = [
         taskTitle: "Research new tools",
         taskDate: "2025-01-02",
         category: "Research",
+        description: "Conduct research on new tools that can improve team productivity.",
       },
       {
         active: true,
@@ -98,6 +111,7 @@ const employees = [
         taskTitle: "Prepare presentation",
         taskDate: "2025-01-05",
         category: "Sales",
+        description: "Create a sales presentation for the upcoming client meeting.",
       },
       {
         active: false,
@@ -107,6 +121,7 @@ const employees = [
         taskTitle: "Conduct code review",
         taskDate: "2024-12-29",
         category: "Development",
+        description: "Review code submitted by the development team for quality assurance.",
       },
       {
         active: false,
@@ -116,6 +131,7 @@ const employees = [
         taskTitle: "Resolve security issues",
         taskDate: "2024-12-30",
         category: "Security",
+        description: "Identify and resolve the security vulnerabilities in the system.",
       },
       {
         active: true,
@@ -125,11 +141,14 @@ const employees = [
         taskTitle: "Create test cases",
         taskDate: "2025-01-03",
         category: "Testing",
+        description: "Develop test cases for the new features in the application.",
       },
     ],
+    taskCount: { active: 3, new: 2, failed: 1, completed: 1 },
   },
   {
     id: 4,
+    firstName: "Kavya",
     email: "employee4@example.com",
     password: "123",
     tasks: [
@@ -141,6 +160,7 @@ const employees = [
         taskTitle: "Team meeting preparation",
         taskDate: "2025-01-01",
         category: "Management",
+        description: "Prepare the agenda and materials for the team meeting.",
       },
       {
         active: true,
@@ -150,6 +170,7 @@ const employees = [
         taskTitle: "Client follow-up",
         taskDate: "2025-01-02",
         category: "Client Relations",
+        description: "Follow up with the client on the pending feedback.",
       },
       {
         active: true,
@@ -159,11 +180,14 @@ const employees = [
         taskTitle: "Design feedback review",
         taskDate: "2025-01-03",
         category: "Design",
+        description: "Review the feedback provided on the recent design drafts.",
       },
     ],
+    taskCount: { active: 2, new: 2, failed: 0, completed: 0 },
   },
   {
     id: 5,
+    firstName: "Aryan",
     email: "employee5@example.com",
     password: "123",
     tasks: [
@@ -175,6 +199,7 @@ const employees = [
         taskTitle: "Client presentation",
         taskDate: "2025-01-03",
         category: "Sales",
+        description: "Prepare and deliver a presentation to the prospective client.",
       },
       {
         active: false,
@@ -184,6 +209,7 @@ const employees = [
         taskTitle: "Budget review",
         taskDate: "2024-12-30",
         category: "Finance",
+        description: "Analyze and finalize the project budget for the upcoming quarter.",
       },
       {
         active: true,
@@ -193,6 +219,7 @@ const employees = [
         taskTitle: "Prepare marketing strategy",
         taskDate: "2025-01-02",
         category: "Marketing",
+        description: "Develop a comprehensive marketing strategy for the new campaign.",
       },
       {
         active: false,
@@ -202,14 +229,19 @@ const employees = [
         taskTitle: "Product prototype evaluation",
         taskDate: "2024-12-31",
         category: "Development",
+        description: "Evaluate the prototype of the new product for potential improvements.",
       },
     ],
+    taskCount: { active: 2, new: 2, failed: 1, completed: 1 },
   },
 ];
+
+
 
 const admin = [
   {
     id: 1,
+    firstName: "Admin",
     email: "admin@example.com",
     password: "123",
     role: "Administrator",

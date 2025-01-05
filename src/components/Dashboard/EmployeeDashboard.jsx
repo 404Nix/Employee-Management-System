@@ -3,12 +3,12 @@ import EmpHeader from "../Others/EmpHeader";
 import TaskOverview from "../Others/TaskOverview";
 import TaskListing from "../TaskList/TaskListing";
 
-const EmployeeDashboard = () => {
+const EmployeeDashboard = ({data}) => {
   return (
     <div className="p-10 bg-[#111111] h-screen w-full text-white">
-      <EmpHeader />
-      <TaskOverview />
-      <TaskListing />
+      <EmpHeader data = {data} />
+      <TaskOverview data = {data}/>
+      <TaskListing data = {data}/>
     </div>
   );
 };
