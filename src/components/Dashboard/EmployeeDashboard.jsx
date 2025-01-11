@@ -3,12 +3,12 @@ import EmpHeader from "../Others/EmpHeader";
 import TaskOverview from "../Others/TaskOverview";
 import TaskListing from "../TaskList/TaskListing";
 
-const EmployeeDashboard = ({data}) => {
+const EmployeeDashboard = (props) => {
   return (
     <div className="p-10 bg-[#111111] h-screen w-full text-white">
-      <EmpHeader data = {data} />
-      <TaskOverview data = {data}/>
-      <TaskListing data = {data}/>
+      <EmpHeader changeUser={props.changeUser} data = {props.data} />
+      <TaskOverview data = {props.data}/>
+      <TaskListing data = {props.data}/>
     </div>
   );
 };

@@ -50,7 +50,7 @@ export const App = () => {
   return (
     <>
       {!user ? <Login loginHandler={loginHandler} /> : null}
-      {user == "admin" ? <AdminDashboard /> : (user == 'employee' ? <EmployeeDashboard data= {loggedInUser} />: null)}
+      {user == "admin" ? <AdminDashboard changeUser={setUser} /> : (user == 'employee' ? <EmployeeDashboard changeUser={setUser} data= {loggedInUser} />: null)}
     </>
   );
 };
