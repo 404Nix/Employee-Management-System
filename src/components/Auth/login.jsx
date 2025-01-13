@@ -14,7 +14,10 @@ const login = ({loginHandler}) => {
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-[#111111]">
+    <div className="flex flex-col h-screen w-full items-center bg-[#111111]">
+
+      <h1 className="uppercase text-emerald-700 font-bold font-sans text-[60px] mb-20 mt-10">Employee management system</h1>
+
       <div>
         <form
           onSubmit={(e) => {
