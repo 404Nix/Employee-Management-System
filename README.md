@@ -46,11 +46,19 @@
         <ul>
             <li>Navigate to the admin panel.</li>
             <li>Assign tasks to employees by entering task details.</li>
+            <li><strong>Login Credentials</strong>:<br>
+                Email: <code>admin@me.com</code><br>
+                Password: <code>123</code>
+            </li>
         </ul>
     </li>
     <li><strong>Employee Access</strong>:
         <ul>
             <li>Employees can log in and view the tasks assigned to them.</li>
+            <li><strong>Login Credentials</strong>:<br>
+                Email: <code>employee1@example.com</code><br>
+                Password: <code>123</code>
+            </li>
         </ul>
     </li>
     <li><strong>Data Persistence</strong>:
