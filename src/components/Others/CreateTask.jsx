@@ -1,37 +1,43 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../context/AuthProvider";
 
 const CreateTask = () => {
-  const [title, setTitle] = useState("");
+
+  const [userData, setUserData] = useContext(AuthContext);
+
+
+  const [taskTitle, setTaskTitle] = useState("");
   const [date, setDate] = useState("");
   const [assign, setAssign] = useState("");
   const [category, setCategory] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDescription] = useState("");
 
 
   const [newTasks, setNewTasks] = useState({})
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // console.log("hey");
 
-    // console.log(title, date, assign, category, desc);
-
-    setNewTasks({title, date, category, desc, active: false, failed: false, newTask: true, completed: false})
+    setNewTasks({taskTitle, date, category, description, active: false, failed: false, newTask: true, completed: false})
     
-    const data = JSON.parse(localStorage.getItem("employees"))
+    const data = userData;
 
     data.forEach((elem) => {
       if(assign == elem.firstName){
         elem.tasks.push(newTasks)
-        console.log(elem.tasks)
+        elem.taskCount.new++;
       }
     });
 
-    setTitle("");
+    setUserData(data)
+    console.log(data)
+    
+
+    setTaskTitle("");
     setDate("");
     setAssign("");
     setCategory("");
-    setDesc("");
+    setDescription("");
   };
 
   return (
@@ -46,9 +52,9 @@ const CreateTask = () => {
           <div className="">
             <h3>Task Title</h3>
             <input
-              value={title}
+              value={taskTitle}
               onChange={(e) => {
-                setTitle(e.target.value)
+                setTaskTitle(e.target.value)
               }}
               className="w-[60%] bg-transparent border-[1px] outline-none rounded-md border-gray-400 text-sm px-2 py-1"
               type="text"
@@ -97,9 +103,9 @@ const CreateTask = () => {
             <h3>Description</h3>
             
             <textarea
-            value={desc}
+            value={description}
             onChange={(e) => {
-              setDesc(e.target.value)
+              setDescription(e.target.value)
               // console.log(desc)
             }}
             className="w-full h-44 text-sm bg-transparent outline-none border-[1px] border-gray-400 px-2 py-1"></textarea>
