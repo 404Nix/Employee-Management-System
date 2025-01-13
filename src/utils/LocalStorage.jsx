@@ -242,7 +242,7 @@ const admin = [
   {
     id: 1,
     firstName: "Admin",
-    email: "admin@example.com",
+    email: "admin@me.com",
     password: "123",
     role: "Administrator",
   },
